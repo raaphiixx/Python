@@ -8,16 +8,22 @@ def commands():
     print(">> Concatenação <<")
     print()
     print("É possivel concatenar de algumas formas:")
+
     variavel = "Variavel concatenada"
     print("1ºUso da virgula:")
     print("Essa frase contém uma concatenação ", variavel)
+    # Após o fechamento da aspa, utiliza-se o , para implementar a variavel
     print("2ºUso do simbolo +:")
     print("Essa frase contém uma concatenação " + variavel)
+    # Após o fechamento da aspa, utiliza-se o + para implementar a variavel
     print()
     print("Tópico especial para falar do .format()")
+    # O .format() é uma forma facilitada e mais didática de implementar as variaveis
     print("Para utilizar o .format() será seguido algumas regras:")
     print("1ºUtilização dos {} dentro das aspas")
+    # As chaves ficam dentro da frase para indicar onde a variavel vai ser implementada
     print("2º.format() será usado após as aspas")
+    # Após o fechamento das aspas usa-se o .format(nome_da_variavel) para implementa-la
     nome = "Raphael"
     print("1ºExemplo: .format() com apenas uma variavel")
     print("Bem-Vindo {}".format(nome))
@@ -27,6 +33,7 @@ def commands():
     cidade = "Salvador"
     print("3ºExemplo: declarando a variavel dentro do {} e as usando depois")
     print("Olá {name}, você é de {city} ?".format(name=nome, city=cidade))
+    # Dentro das {} são denominados nomes para determinada variavel, que logo serão utilizadas no .format()
 
 
 def basic_concepts():
@@ -35,15 +42,19 @@ def basic_concepts():
     nome = 'Raphael'
     print(nome)
     print("Tipo da variavel: {} ".format(type(nome)))
+    # Conhecido também como STRINGS
     idade = 24
     print(idade)
     print("Tipo da variavel: {} ".format(type(idade)))
+    # Conhecido também como INTEIROS
     altura = 1.73
     print(altura)
     print("Tipo da variavel: {} ".format(type(altura)))
+    # Conhecido também como PONTO FLUTUANTE, ou seja, números com CASAS DECIMAIS
     ligado = True
     print(ligado)
     print("Tipo da variavel: {} ".format(type(ligado)))
+    # Conhecido também como BOLEANOS (VERDADEIRO OU FALSO)
 
 
 def arithmetics(a, b):
@@ -60,6 +71,7 @@ def arithmetics(a, b):
     print("Multiplicação: {}".format(multplicacao))
     resto = a % b
     print("Resto da divisão {}".format(resto))
+    # Exemplo de resto de divisão: 2/5 = 2 e o resto é 1
 
     a = 10
     b = 12
@@ -73,6 +85,7 @@ def arithmetics(a, b):
 
 def tuples_array():
     print(">>> Tuplas/Listas <<<")
+    # Tuplas são criadas com () e Listas com []
     print()
 
     print("__Criando uma tuple:__")
@@ -184,7 +197,7 @@ def simple_conditions(a, b):
     print(">>> Condicionais Simples <<<")
     print()
 
-    print("Condicional Simples: IF ELSE")
+    print("__Condicional Simples: IF ELSE__")
     if a > b:
         print("Se {} for maior que {} então:".format(a, b))
         print("{} é maior que {}".format(a, b))
@@ -193,16 +206,56 @@ def simple_conditions(a, b):
         print("{} é menor ou igual a {}".format(a, b))
     print()
 
-    print("Condicional Simples: IF ELIF ELSE")
+    print("__Condicional Simples: IF ELIF ELSE__")
     if a > b:
         print("{} é maior que {}".format(a, b))
     elif b > a:
         print("Elif é um else com condição")
+        # Else if (condição):
         print("{} é maior que {}".format(b, a))
     else:
         print("{} é igual a {}".format(a, b))
 
 
+def compose_conditions(a, b, c):
+    print(">>> Condicionais Compostas <<<")
+    print()
+
+    print("__Mais de uma variável__")
+    print("__ 3 Condições __")
+    print("A: {} | B: {} | C: {}".format(a, b, c))
+    if a + b + c > 10:
+        print("A + B + C é MAIOR que 10")
+    else:
+        print("A + B + C é MENOR que 10")
+    print()
+
+    print("__Uso do operador AND__")
+    # O operador AND só será validado se todas as condições forem VERDADEIRAS
+    if (a + b > c) and (a + c > b) and (c + b > a):
+        print("É um triângulo!")
+    else:
+        print("Não é um triângulo")
+    print()
+
+    print("__Uso do operador OR__")
+    # O operador OR será validado caso alguma das condições for VERDADEIRA
+    if (a == b) or (b == c) or (c == a):
+        print("Algum dos valores é igual")
+    else:
+        print("Todos os valores são diferentes")
+    print()
+
+    print("__Uso do operador NOT__")
+    # O operador NOT serve para negar algo que seria VERDEIRO, o tornando FALSO
+    if (a > b) and not (b > c):
+        print("A é maior que B e B NÃO é MAIOR que C ")
+    else:
+        print("B pode ser MAIOR que A e B é MAIOR QUE C")
+    print()
+
+
 if __name__ == '__main__':
     # Para executar qualquer um dos comandos, digitar o nome da função e executar
-    simple_conditions(10, 11)
+    # As funções arithmetics(2) | simple_conditions(2) | compose_conditions(3) necessitam de (x) parametros
+    pass

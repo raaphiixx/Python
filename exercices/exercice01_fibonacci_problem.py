@@ -3,6 +3,7 @@ print("Crie um programa que mostre"
       "as 20 primeiras posições da tabela"
       "de Fibonacci")
 print()
+
 print("Essa deverá ser a saída:")
 fibonacci = """F0 = 0
 F1 = 1
