@@ -83,7 +83,7 @@ def arithmetics(a, b):
     print("{} é maior que {}: {}".format(a, b, d))
 
 
-def tuples_array():
+def tuples_and_array():
     print(">>> Tuplas/Listas <<<")
     # Tuplas são criadas com () e Listas com []
     print()
@@ -100,8 +100,13 @@ def tuples_array():
 
     print("___Criando uma lista:___")
     pessoas = ['Raphael', 'Claudio', 'Lucas', 'Felipe', 'Amanda', 'Paula']
+    # Por boas práticas, cada lista deve ter seu tipo
     print(pessoas)
     print()
+
+    print("__Tamanho da Lista__")
+    print(pessoas)
+    print("A lista tem: {} itens".format(len(pessoas)))
 
     print("___Array Completo:___")
     print(pessoas)
