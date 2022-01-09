@@ -55,6 +55,7 @@ def repeat_while():
 
 def sets():
     print(">>> Conjuntos <<<")
+    # Conjuntos também são chamados de dicionários (dict)
     print()
 
     print("__Criando um Conjunto__")
@@ -152,5 +153,30 @@ def sets():
     print("TODOS os elementos do conj.B estão no conj.A? {}".format(conjuntoC))
 
 
+def function():
+    print(">>> Definitions <<<")
+    print()
+
+    print("__Criando uma Função__")
+    print("Toda função no python começa com def nome_funcao()")
+    print("Checar os comentários")
+    """"
+    Os () indicam se a função receberá algum valor
+    Por exemplo:
+    def soma(a,b): # Explicando: A função receberá 2 parametros
+        total = a + b # Explicando: Os 2 parametros serão somados 
+        return total    # A função irá retornar o resultado
+    Chamando a função acima:
+    print(soma(10, 2)) # Explicando: Forma de chamar a função e imprimindo
+    """
+    print()
+
+    print("Existem diversas vantagens de usar as funções / definições")
+    print("1º Conseguir dividir seu código em pequenos trechos")
+    print("1.1º Códigos divididos são mais fáceis para refatorar")
+    print("1.2º É possível executar partes separadas do código")
+    print("2º Toda aplicação é feita em funções")
+
+
 if __name__ == '__main__':
-    sets()
+    function()
