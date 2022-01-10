@@ -58,20 +58,20 @@ def sets():
     # Conjuntos também são chamados de dicionários (dict)
     print()
 
-    print("__Criando um Conjunto__")
+    print("__ Criando um Conjunto __")
     print("Não é possivel ter dois elementos iguais (tipo e valor)")
     conjunto = {4, 9, 2, 1, 5,}
     # OBS PESSOAL: CONJUNTOS CRIADOS, SEMPRE VÃO SE ORGANIZAR DE FORMA AUTOMÁTICA
     print(conjunto)
     print()
 
-    print("__Adcionando elementos ao Conjunto__")
+    print("__ Adcionando elementos ao Conjunto __")
     print("Conjunto original: {}".format(conjunto))
     conjunto.add(8)
     print("Conjunto após adição: {}".format(conjunto))
     print()
 
-    print("__Remoção de elementos do Conjunto__")
+    print("__ Remoção de elementos do Conjunto __")
     print("METODO 1:")
     print("Utilização do método remove(item)")
     print("Conjunto original: {}".format(conjunto))
@@ -89,7 +89,7 @@ def sets():
     """
     print()
 
-    print("__União entre Conjuntos__")
+    print("__ União entre Conjuntos __")
     conjunto1 = {2, 4, 5, 8}
     conjunto2 = {1, 2, 7, 9}
     conjunto3 = conjunto1.union(conjunto2)
@@ -99,7 +99,7 @@ def sets():
     # Respeitando a regra de não duplicidade, o conjunto não terá elementos repetidos
     print()
 
-    print("__Interseção entre Conjuntos__")
+    print("__ Interseção entre Conjuntos __")
     print("Apresenta os elementos que são comuns nos Conjuntos")
     conjuntoA = {1, 2, 4, 7, 9}
     conjuntoB = {3, 7, 1, 8, 5}
@@ -110,7 +110,7 @@ def sets():
     # Respeita a regra de duplicidade e mostra apenas os elementos em comum em ambos os conjuntos
     print()
 
-    print("__Diferença entre Conjuntos__")
+    print("__ Diferença entre Conjuntos __")
     conjuntoI = {1, 2, 4, 6, 8}
     conjuntoII = {3, 5, 1, 4, 6}
     conjuntoIII = conjuntoI.difference(conjuntoII)
@@ -123,7 +123,7 @@ def sets():
     print("Diferença do conjunto II para o I: {}".format(conjuntoIV))
     print()
 
-    print("__Diferença Simétrica entre Conjuntos__")
+    print("__ Diferença Simétrica entre Conjuntos __")
     conjunto1 = {1, 4, 3, 5}
     conjunto2 = {1, 4, 6, 7}
     conjunto3 = conjunto2.symmetric_difference(conjunto1)
@@ -133,7 +133,7 @@ def sets():
     print("Diferença simétrica entre os conjuntos: {}".format(conjunto3))
     print()
 
-    print("__Subset__")
+    print("__ Subset __")
     conjuntoA = {1, 2, 4}
     conjuntoB = {1, 2, 7, 9, 4}
     conjuntoC = conjuntoA.issubset(conjuntoB)
@@ -143,7 +143,7 @@ def sets():
     print("O conj.B tem todos os elementos do conj.A? {}".format(conjuntoC))
     print()
 
-    print("__SuperSet__")
+    print("__ SuperSet __")
     conjuntoA = {1, 2, 4}
     conjuntoB = {1, 2, 7, 9, 4}
     conjuntoC = conjuntoA.issuperset(conjuntoB)
@@ -178,5 +178,136 @@ def function():
     print("2º Toda aplicação é feita em funções")
 
 
+def transform_list_dict():
+    print(">>> Transformação de Arrays e Set <<<")
+    print()
+
+    print("__Conjunto para Lista__")
+    conjunto = {"Raphael", "Vanessa", "Dona Joo"}
+    print("Este é o set: {}".format(conjunto))
+    print("Tipo da variável: {}".format(type(conjunto)))
+    lista = list(conjunto)
+    print("Váriavel após a transformação: {}".format(lista))
+    print("Tipo da variável: {}".format(type(lista)))
+    print()
+
+    print("__Lista para Conjuntos__")
+    lista = [1, 2, 3, 4, 5, 5]
+    print("Está é a lista: {}".format(lista))
+    print("Tipo da variável: {}".format(type(lista)))
+    conjunto = set(lista)
+    print("Variavel após transformação: {}".format(conjunto))
+    print("Tipo da variável: {}".format(type(conjunto)))
+
+
+def advanced_strings():
+    print(">>> Conceitos avançado sobre Strings <<<")
+    print()
+
+    print("__ Multiplas linhas __")
+    # Ao utilizar """ texto """ aspas triplas (simples ou duplas) é possivel escrever varias linhas
+    linhas = """Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut posuere nunc sed tortor tempor, ut blandit arcu placerat. Nam risus diam, condimentum vitae urna eu, porttitor ornare velit. Pellentesque sed velit risus. Morbi varius aliquet aliquam. Suspendisse at mattis neque. """
+    print(linhas)
+    print()
+
+    print("__ Strings são listas __")
+    hello = 'HELLO WORLD'
+    print("Escolhendo a posição: {}".format(hello[3]))
+    # String são arrays, por isso é possivel escolher a posição deseja mostrar
+    print("É possível utilizar o FOR dentro de uma string:")
+    fruta = 'tomate'
+    for letras in fruta:
+        print(letras)
+    print("1º É possível saber seu tamanho:")
+    palavra = 'onomatopeia'
+    print("A palavra {} tem {} letras".format(palavra, len(palavra)))
+    print("2º Checar se há tal elemento dentro da string:")
+    # Lembrando que é case sensite, ou seja, há diferença entre maiúsculo e minusculo
+    string = "Aqui temos um exemplo de string, para checagem"
+    print("A frase é: {}".format(string))
+    print("A palavra OK está na variavel: {}".format("Ok" in string))
+    print("A palavra temos está na variavel: {}".format("temos" in string))
+    print("3º Checar se NÃO há tal elemento dentro da sting:")
+    print("Retorna False se encontrar e True se NÃO encontrar")
+    stringnot = "Mais um exemplo de string para checagem"
+    print("A frase é: {}".format(stringnot))
+    print("A palavra exemplo está na variavel: {}".format("exemplo" not in string))
+    print()
+
+    print("__ \"Recortando\" Strings __ ")
+    ola = 'Olá Mundo!'
+    print("String original: {}".format(ola))
+    print("Parte da string: {}".format(ola[0:3]))
+    # variavel[posicao_inicial : posicao_final]
+    print("Partido do início e indo até certa posição:")
+    inicio = "Tudo bem?"
+    print("String original: {}".format(inicio))
+    print("Parte da string: {}".format(inicio[:4]))
+    # Outra forma: variavel[0:4]
+    print("Escolhendo o ponto inicial e indo até o final:")
+    final = "Aqui estou mais um dia"
+    print("String original: {}".format(final))
+    print("String original: {}".format(final[5:]))
+    # Escolhe a posição inicial e vai até o final
+    print()
+
+    print("__ Transformando Strings __")
+    minuscula = 'OLÁ MUNDO!'
+    print("1º Minuscula:")
+    print("String Original: {}".format(minuscula))
+    print("Em minúscula: {}".format(minuscula.lower()))
+    # .chamando a função lower() que transforma a string toda em minuscula
+    print("2º Maiúscula:")
+    maiuscula = 'hello world!'
+    print("String Original: {}".format(maiuscula))
+    print("Em minúscula: {}".format(maiuscula.upper()))
+    print("3º Primeira letra maiúscula:")
+    primeiraLetra = 'OLA WORLD!'
+    print("String Original: {}".format(primeiraLetra))
+    print("String modificada: {}".format(primeiraLetra.capitalize()))
+    # Somente a primeira letra da string estará em maiusculo
+    print()
+
+    print("__ Outros métodos __")
+    print("Remover espaços em branco: ")
+    branco = '  Espaços  '
+    print("String Original: {}".format(branco))
+    print("Tamanho da String: {}".format(len(branco)))
+    removeBranco = branco.strip()
+    print("String sem espaços em branco: {}".format(removeBranco))
+    print("Novo tamanho da String: {}".format(len(removeBranco)))
+    print()
+
+    print("Substituição:")
+    string1 = 'Hello World!'
+    print("String Original: {}".format(string1))
+    string2 = string1.replace('l', 'u')
+    # Trocando todas as letra l por u
+    print("Trocando o l por t: {}".format(string2))
+    print()
+
+    print("Dividindo a String:")
+    original = 'Tudo bem contigo?'
+    print("String original: {}".format(original))
+    dividido = original.split(" ")
+    # split(" "), a divisão é por espaços em branco
+    print("Nova String: {}".format(dividido))
+    print()
+
+    print("Métodos de Pesquisa:")
+    pesquisa = 'Welcome to the jungle!'
+    print("Método find():")
+    procura = pesquisa.find('to')
+    # Retorna onde começa o elemeto a ser pesquisado
+    # Caso não encontre retorna -1
+    print("Indicando o ÍNICIO da busca: {}".format(procura))
+    print("Método index():")
+    pesquisa2 = 'Welcome to the prision'
+    procura2 = pesquisa2.index('the')
+    # Retorna onde começa o elemeto a ser pesquisado
+    # Caso não encontre lança um erro "ValueError: substring not found"
+    print("Indicando o ÍNICIO da busca: {}".format(procura2))
+
+
 if __name__ == '__main__':
-    function()
+    advanced_strings()

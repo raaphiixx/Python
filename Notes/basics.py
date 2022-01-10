@@ -4,7 +4,7 @@ print("Utilizar o if_name para executar os códigos")
 print()
 
 
-def commands():
+def basic_concepts():
     print(">> Concatenação <<")
     print()
     print("É possivel concatenar de algumas formas:")
@@ -36,7 +36,7 @@ def commands():
     # Dentro das {} são denominados nomes para determinada variavel, que logo serão utilizadas no .format()
 
 
-def basic_concepts():
+def data_type():
     print(">>> Tipos Primitivos: <<<")
     print()
     nome = 'Raphael'
@@ -72,6 +72,8 @@ def arithmetics(a, b):
     resto = a % b
     print("Resto da divisão {}".format(resto))
     # Exemplo de resto de divisão: 2/5 = 2 e o resto é 1
+    potencia = a ** a
+    print("{} elevado a {} = {}".format(a, b, potencia))
 
     a = 10
     b = 12
@@ -123,13 +125,19 @@ def tuples_and_array():
     print(pessoas)
     print()
 
-    print("___Excluindo elementos:___")
+    print("__ Copiando listas: __")
+    print("Lista Original: {}".format(pessoas))
+    pessoas2 = pessoas.copy()
+    print("Cópia da Lista: {}".format(pessoas2))
+    print()
+
+    print("__ Excluindo elementos: __")
     print("Array Completo:")
     print(pessoas)
     pessoas.remove("Felipe")
-    print("Excluindo um elemento pelo seu nome")
+    print("Excluindo um elemento pelo nome:")
     print(pessoas)
-    print("Excluindo o ultimo elemento")
+    print("Excluindo o último elemento:")
     pessoas.pop()
     print(pessoas)
     print("Excluindo o indice 2")
@@ -137,7 +145,7 @@ def tuples_and_array():
     print(pessoas)
     print()
 
-    print("__Alterando Elementos:__")
+    print("__ Alterando Elementos: __")
     print("Array Completo: ")
     print(pessoas)
     print("Alterando o Array:")
@@ -145,7 +153,7 @@ def tuples_and_array():
     print(pessoas)
     print()
 
-    print("__Adcionando Elementos:__")
+    print("__ Adcionando Elementos: __")
     print("Array Original:")
     print(pessoas)
     print("Alterando Array:")
@@ -153,13 +161,13 @@ def tuples_and_array():
     print(pessoas)
     print()
 
-    print("__Localizando um Elemento:__")
+    print("__ Localizando um Elemento: __")
     elemento = pessoas.index("Joo")
     print("Localizando um elemento por sua referência")
     print("O elemento {} está na posição {}".format(pessoas[3], elemento))
     print()
 
-    print("__Limpando uma Lista__")
+    print("__ Limpando uma Lista: __")
     print("Array Completo:")
     print(pessoas)
     print("Limpando o Array:")
@@ -263,4 +271,4 @@ def compose_conditions(a, b, c):
 if __name__ == '__main__':
     # Para executar qualquer um dos comandos, digitar o nome da função e executar
     # As funções arithmetics(2) | simple_conditions(2) | compose_conditions(3) necessitam de (x) parametros
-    pass
+    tuples_and_array()
