@@ -6,6 +6,9 @@
 <h3>🤔 Por que escolhi Python ? 🤔</h3>
 <p>Comecei a aprender sobre a linguagem python na faculdade, mas comecei de fato a me interessar na linguagem depois que conheci o canal <a href='https://www.youtube.com/c/CursoemV%C3%ADdeo'>Curso em Vídeo</a> do professor Gustavo Guanabara.</p>
 
+<h3>Observações Importantes: </h3>
+<p>1º Esse repositório não é um tutorial, são apenas observações pessoais e uma forma de mostrar meu progresso</p>
+<p>2º Nem todo conteúdo básico é realmente básico, o mesmo vale para o intermediário</p>
 
 <h3>📚 Lista de referências 📚</h3>
 <a href='https://web.dio.me/home' target='_blank'>Dio</a>
