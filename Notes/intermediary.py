@@ -22,21 +22,39 @@ def repeat_for():
         print(laco2)
     print()
 
-    print("__Percorrendo uma lista com o laço FOR__")
+    print("__ Percorrendo uma lista com o laço FOR __")
     lista = ["Raphael", "Santana", "Freitas", "Cazer"]
     print("Mostrando a lista completa:")
     print(lista)
     print("Separando os itens da lista")
     for mostra_lista in lista:
         print(mostra_lista)
+    print()
+
+    print("__ Break / Continue __")
+    print("1º Utilização do BREAK:")
+    for cont in range(10):
+        print(cont)
+        if cont == 5:
+            print("Fim!")
+            break
+            # Faz um pausa brusca, caso o cont seja igual a 5, o loop se encerra
+    print("2º Utilização do CONTINUE:")
+
+    for letras in 'Python':
+        if letras == 'P':
+            continue
+            # Faz com que o próximo laço comece sem que passe para a próxima instrução
+        print("Letra: {}".format(letras))
 
 
 def repeat_while():
     print(">>> Laço de repetição WHILE <<<")
     print()
 
-    print("Diferentemente do laço FOR, é necessário declarar a variavel antes do laço e também declarar o passo dentro do laço")
-    print("__Criando um contador de 1 a 10__")
+    print(
+        "Diferentemente do laço FOR, é necessário declarar a variavel antes do laço e também declarar o passo dentro do laço")
+    print("__ Criando um contador de 1 a 10 __")
     contador = 0
     # Variável declarada
     while contador <= 10:
@@ -45,7 +63,7 @@ def repeat_while():
         # Passo
     print()
 
-    print("__Criando um contador de 10 a 1__")
+    print("__ Criando um contador de 10 a 1 __")
     contador_inverso = 10
     while contador_inverso >= 0:
         print(contador_inverso)
@@ -60,7 +78,7 @@ def sets():
 
     print("__ Criando um Conjunto __")
     print("Não é possivel ter dois elementos iguais (tipo e valor)")
-    conjunto = {4, 9, 2, 1, 5,}
+    conjunto = {4, 9, 2, 1, 5, }
     # OBS PESSOAL: CONJUNTOS CRIADOS, SEMPRE VÃO SE ORGANIZAR DE FORMA AUTOMÁTICA
     print(conjunto)
     print()
@@ -157,7 +175,7 @@ def function():
     print(">>> Definitions <<<")
     print()
 
-    print("__Criando uma Função__")
+    print("__ Criando uma Função __")
     print("Toda função no python começa com def nome_funcao()")
     print("Checar os comentários")
     """"
@@ -182,7 +200,7 @@ def transform_list_dict():
     print(">>> Transformação de Arrays e Set <<<")
     print()
 
-    print("__Conjunto para Lista__")
+    print("__ Conjunto para Lista __")
     conjunto = {"Raphael", "Vanessa", "Dona Joo"}
     print("Este é o set: {}".format(conjunto))
     print("Tipo da variável: {}".format(type(conjunto)))
@@ -191,7 +209,7 @@ def transform_list_dict():
     print("Tipo da variável: {}".format(type(lista)))
     print()
 
-    print("__Lista para Conjuntos__")
+    print("__ Lista para Conjuntos __")
     lista = [1, 2, 3, 4, 5, 5]
     print("Está é a lista: {}".format(lista))
     print("Tipo da variável: {}".format(type(lista)))
@@ -300,14 +318,30 @@ def advanced_strings():
     procura = pesquisa.find('to')
     # Retorna onde começa o elemeto a ser pesquisado
     # Caso não encontre retorna -1
-    print("Indicando o ÍNICIO da busca: {}".format(procura))
+    print("Indicando a posição INICIAL da busca: {}".format(procura))
     print("Método index():")
     pesquisa2 = 'Welcome to the prision'
     procura2 = pesquisa2.index('the')
     # Retorna onde começa o elemeto a ser pesquisado
     # Caso não encontre lança um erro "ValueError: substring not found"
-    print("Indicando o ÍNICIO da busca: {}".format(procura2))
+    print("Indicando a posição INICIAL da busca: {}".format(procura2))
+
+
+def lambdas():
+    print(">>> LAMBDAS <<<")
+    print()
+    # Funções lambdas, também conhecidas como funções anônimas são uma forma de simplificar algumas funções.
+    # NÃO É OBRIGATÓRIO USAR FUNÇÕES ANÔNIMAS, PORÉM UTILIZA-LAS TORNA O CÓDIGO MAIS LIMPO
+
+    print("""FUNÇÃO COMUM:
+    def multiplicacao(a, b):
+        total = a * b
+        return total
+    """)
+
+    print("""FUNÇÃO LAMBDA:
+    multiplicacao = lambda a, b: a * b""")
 
 
 if __name__ == '__main__':
-    advanced_strings()
+    pass

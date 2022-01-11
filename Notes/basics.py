@@ -85,6 +85,37 @@ def arithmetics(a, b):
     print("{} é maior que {}: {}".format(a, b, d))
 
 
+def inputs():
+    print(">> Entrada de usuário <<")
+    print()
+
+    print("__Inserindo Valores__")
+    nome = input("Qual o seu nome? ")
+    print("Olá {}, tudo bem?".format(nome))
+    print()
+
+    print("Valores inteiros precisam ser declarados antes")
+    print("1ºExemplo: Sem declarar o tipo")
+    numero1 = input("Digite um número inteiro: ")
+    print("Digitado: {} e seu tipo é {}".format(numero1, type(numero1)))
+    numero2 = int(input("Digite um número inteiro: "))
+    print("Digitado: {} e seu tipo é {}".format(numero2, type(numero2)))
+    print()
+
+    print("Números do tipo FLOAT, precisa ser declarado antes também")
+    float1 = input("Quanto vale pi? ")
+    print("Pi vale {} seu tipo digitado foi {}".format(float1, type(float1)))
+    float2 = float(input("Qual a temperatura de hoje? "))
+    print("Hoje fazer {}ºC seu tipo digitado foi {}".format(float2, type(float2)))
+    print()
+
+    print("__Tratando Valores__")
+    valor1 = int(input("Digite o 1º valor inteiro: "))
+    valor2 = int(input("Digite o 2º valor inteiro: "))
+    total = valor1 + valor2
+    print("A soma entre {} e {} é igual a {}".format(valor1, valor2, total))
+
+
 def tuples_and_array():
     print(">>> Tuplas/Listas <<<")
     # Tuplas são criadas com () e Listas com []
@@ -173,37 +204,6 @@ def tuples_and_array():
     print("Limpando o Array:")
     pessoas.clear()
     print(pessoas)
-
-
-def inputs():
-    print(">> Entrada de usuário <<")
-    print()
-
-    print("__Inserindo Valores__")
-    nome = input("Qual o seu nome? ")
-    print("Olá {}, tudo bem?".format(nome))
-    print()
-
-    print("Valores inteiros precisam ser declarados antes")
-    print("1ºExemplo: Sem declarar o tipo")
-    numero1 = input("Digite um número inteiro: ")
-    print("Digitado: {} e seu tipo é {}".format(numero1, type(numero1)))
-    numero2 = int(input("Digite um número inteiro: "))
-    print("Digitado: {} e seu tipo é {}".format(numero2, type(numero2)))
-    print()
-
-    print("Números do tipo FLOAT, precisa ser declarado antes também")
-    float1 = input("Quanto vale pi? ")
-    print("Pi vale {} seu tipo digitado foi {}".format(float1, type(float1)))
-    float2 = float(input("Qual a temperatura de hoje? "))
-    print("Hoje fazer {}ºC seu tipo digitado foi {}".format(float2, type(float2)))
-    print()
-
-    print("__Tratando Valores__")
-    valor1 = int(input("Digite o 1º valor inteiro: "))
-    valor2 = int(input("Digite o 2º valor inteiro: "))
-    total = valor1 + valor2
-    print("A soma entre {} e {} é igual a {}".format(valor1, valor2, total))
 
 
 def simple_conditions(a, b):
