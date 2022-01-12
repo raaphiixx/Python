@@ -15,3 +15,5 @@
 <a href='https://www.youtube.com/c/CursoemV%C3%ADdeo' target='_blank'>Curso em Vídeo</a>
 <br>
 <a href='https://www.w3schools.com/python/' target='_blank'>W3Schools</a>
+<br>
+<a href='https://www.caelum.com.br/apostila-python-orientacao-a-objetos/heranca-e-classes-abstratas#reescrita-de-metodos' target='_blank'>Caelum</a>
